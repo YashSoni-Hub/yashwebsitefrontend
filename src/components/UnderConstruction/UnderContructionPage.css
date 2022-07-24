@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+.underConstrucyionSection {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftSideBox {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.rightSideBox {
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  /* width: 30%; */
+}
+.rightSideBox > h1 {
+  color: rgb(0, 0, 0);
+  font-family: "Mochiy Pop One", sans-serif;
+}
+.rightSideBox > h2 {
+  margin-top: 10px;
+  color: rgb(65, 65, 65);
+
+  font-family: "Mochiy Pop One", sans-serif;
+}
