@@ -1,0 +1,174 @@
+.homeCanvas {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.homeContainer {
+  background-color: #fff;
+  padding-top: 4vmax;
+  border-radius: 0 0 200px 200px;
+  border-bottom: 200px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.homeContainer > p {
+  text-align: center;
+  font-size: 4vmax;
+  color: black;
+}
+
+.homeYoutubeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2vmax;
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid black; */
+}
+
+.homeSkills {
+  overflow-x: hidden;
+  transform: translateY(-200px);
+  background-color: rgb(25, 17, 58);
+  height: 1500px;
+  padding: 200px;
+  box-sizing: border-box;
+  perspective: 450px;
+  margin-bottom: -200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homeSkills > h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 4vmax;
+  margin-bottom: 4vmax;
+}
+
+.homeCubeSkills {
+  height: 200px;
+  width: 200px;
+  animation: cubeRotation 15s linear infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.homeCubeSkillsFaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px black;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  opacity: 0.7;
+}
+
+.cubeShadow {
+  width: 300px;
+  height: 40px;
+  background-color: grey;
+  border-radius: 50%;
+  animation: cubeShadow 1s ease-in-out infinite alternate;
+  filter: blur(3px);
+}
+
+.homeCubeSkillsFaces > img {
+  height: inherit;
+  width: inherit;
+}
+
+.homeSkillBox {
+  background-color: hsl(250, 100%, 75%);
+  position: absolute;
+  padding: 0 2vmax;
+  display: flex;
+  flex-direction: column;
+  right: -300px;
+  animation: homeSkillBoxAnimationOn 4s linear forwards;
+}
+
+.homeSkillBox > svg {
+  font-size: 5vmax;
+  color: #fff;
+  transition: all 0.5s;
+  margin: 10px;
+}
+
+.homeSkillBox > svg:hover {
+  transform: scale(1.5);
+}
+
+.homeCubeSkillsFace1 {
+  transform: translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace2 {
+  transform: rotateY(180deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace3 {
+  transform: rotateY(-90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace4 {
+  transform: rotateY(90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace5 {
+  transform: rotateX(-90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace6 {
+  transform: rotateX(90deg) translate3d(0, 0, 150px);
+}
+
+.homeYoutube {
+  background-color: #fff;
+  padding-top: 4vmax;
+  transform: translateY(-200px);
+  border-radius: 20% 20% 0 0;
+  position: relative;
+  margin-bottom: -200px;
+}
+
+.homeYoutube > h3 {
+  text-align: center;
+  color: black;
+  padding: 4vmax;
+}
+
+@keyframes cubeRotation {
+  to {
+    transform: rotateY(360deg) rotateX(460deg) rotatez(720deg);
+  }
+}
+
+@keyframes cubeShadow {
+  to {
+    transform: scale(1.2) translateY(-10px);
+  }
+}
+
+@keyframes homeSkillBoxAnimationOn {
+  from {
+    right: -3000px;
+  }
+  to {
+    right: 40px;
+  }
+}
+
+@keyframes homeSkillBoxAnimationOff {
+  from {
+    right: 40px;
+  }
+  to {
+    right: -300px;
+  }
+}
